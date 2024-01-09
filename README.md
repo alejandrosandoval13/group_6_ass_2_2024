@@ -96,3 +96,58 @@ last_names_no_email = [last_name for last_name, email in combined_data if email 
 print("Last Names of Students without Email:", last_names_no_email)
 
 Last Names of Students without Email: ['HUANCAYA IDONE', 'CALVO PORTOCARRERO', 'IBAÑEZ ABANTO', 'MELÉNDEZ APONTE', 'CRISTIAN SERRANO', 'ANGLAS GARCÍA', 'ALDAVE ACOSTA', 'NÚÑEZ HUAMÁN', 'OBREGON HUAMAN', 'SOTO PACHERRES', 'INGARUCA RIVERA', 'ROJAS HUAMAN', 'NEYRA SALAS', 'HUERTA ESPINOZA', 'HUANCA MARTINEZ']
+
+# 1.3 Strings
+## 1. Separate the words from str1 using the split method
+      Join the words of Str1 with the join function
+      Results are displayed with print
+      
+str1 = 'I am                          too                                                        old'
+words = str1.split()
+x = ' '.join(words)
+print(x)
+
+I am too old
+
+## 2. To count the letters of str1, the 'len' function is used on the X created previously
+len(x)
+12
+
+## 3. First we place the name blank spaces, then the .count formula that allows us to calculate the number of spaces in a certain section
+Blank_spaces = str1.count(' ')
+print(Blank_spaces)
+85
+
+len(str1) - len(x) -3
+79
+
+## 4. 
+emails = ["cscornejo@pucp.edu.pe", "orellana.cn@pucp.edu.pe", "karina.morales@pucp.edu.pe", "a20083223@pucp.pe", "abel.camacho@pucp.pe", "mtintaya@pucp.edu.pe", "joselin.chavez@pucp.edu.pe", "a20105737@pucp.pe", "jfgomezc@pucp.pe", "afrania.palomino@pucp.pe", "luzon.bianca@pucp.pe", "adrian.suanaz@pucp.pe", "soto.y@pucp.edu.pe", "a20132766@pucp.pe", "andre.lama@pucp.edu.pe", "gustavo.meza@pucp.edu.pe", "pmlozada@pucp.edu.pe", "m.zambranoj@pucp.edu.pe", "nicolas.jacobs@pucp.edu.pe", "gvidal@pucp.edu.pe", "jane.torres@pucp.edu.pe", "m.lopez@pucp.edu.pe", "alejandro.boyco@pucp.edu.pe", "a20167070@pucp.edu.pe", "riega.stephy@pucp.edu.pe", "vlevanot@pucp.edu.pe", "sesquives@pucp.edu.pe", "perez.juanc@pucp.edu.pe", "mariana.otero@pucp.edu.pe", "aclavo@pucp.edu.pe", "a20182474@pucp.edu.pe", "josue.caldas@pucp.edu.pe", "fabio.salas@pucp.edu.pe", "fernanda.pizarro@pucp.edu.pe", "aquillatupa@pucp.pe"]
+positions = list(map(lambda email: email.find('@'), emails))
+
+print(positions)
+[9, 11, 14, 9, 12, 8, 14, 9, 8, 16, 12, 13, 6, 9, 10, 12, 8, 11, 14, 6, 11, 7, 15, 9, 12, 8, 9, 11, 13, 6, 9, 12, 11, 16, 11]
+
+## 5. 
+emails = ["cscornejo@pucp.edu.pe", "orellana.cn@pucp.edu.pe", "karina.morales@pucp.edu.pe", "a20083223@pucp.pe", "abel.camacho@pucp.pe", "mtintaya@pucp.edu.pe", "joselin.chavez@pucp.edu.pe", "a20105737@pucp.pe", "jfgomezc@pucp.pe", "afrania.palomino@pucp.pe", "luzon.bianca@pucp.pe", "adrian.suanaz@pucp.pe", "soto.y@pucp.edu.pe", "a20132766@pucp.pe", "andre.lama@pucp.edu.pe", "gustavo.meza@pucp.edu.pe", "pmlozada@pucp.edu.pe", "m.zambranoj@pucp.edu.pe", "nicolas.jacobs@pucp.edu.pe", "gvidal@pucp.edu.pe", "jane.torres@pucp.edu.pe", "m.lopez@pucp.edu.pe", "alejandro.boyco@pucp.edu.pe", "a20167070@pucp.edu.pe", "riega.stephy@pucp.edu.pe", "vlevanot@pucp.edu.pe", "sesquives@pucp.edu.pe", "perez.juanc@pucp.edu.pe", "mariana.otero@pucp.edu.pe", "aclavo@pucp.edu.pe", "a20182474@pucp.edu.pe", "josue.caldas@pucp.edu.pe", "fabio.salas@pucp.edu.pe", "fernanda.pizarro@pucp.edu.pe", "aquillatupa@pucp.pe"]
+X = list(map(lambda x: ".edu." in x, emails))
+
+print(X)
+[True, True, True, False, False, True, True, False, False, False, False, False, True, False, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, False]
+
+## 6. 
+emails = ["cscornejo@pucp.edu.pe", "orellana.cn@pucp.edu.pe", "karina.morales@pucp.edu.pe", "a20083223@pucp.pe", "abel.camacho@pucp.pe", "mtintaya@pucp.edu.pe", "joselin.chavez@pucp.edu.pe", "a20105737@pucp.pe", "jfgomezc@pucp.pe", "afrania.palomino@pucp.pe", "luzon.bianca@pucp.pe", "adrian.suanaz@pucp.pe", "soto.y@pucp.edu.pe", "a20132766@pucp.pe", "andre.lama@pucp.edu.pe", "gustavo.meza@pucp.edu.pe", "pmlozada@pucp.edu.pe", "m.zambranoj@pucp.edu.pe", "nicolas.jacobs@pucp.edu.pe", "gvidal@pucp.edu.pe", "jane.torres@pucp.edu.pe", "m.lopez@pucp.edu.pe", "alejandro.boyco@pucp.edu.pe", "a20167070@pucp.edu.pe", "riega.stephy@pucp.edu.pe", "vlevanot@pucp.edu.pe", "sesquives@pucp.edu.pe", "perez.juanc@pucp.edu.pe", "mariana.otero@pucp.edu.pe", "aclavo@pucp.edu.pe", "a20182474@pucp.edu.pe", "josue.caldas@pucp.edu.pe", "fabio.salas@pucp.edu.pe", "fernanda.pizarro@pucp.edu.pe", "aquillatupa@pucp.pe"]
+
+positions = list(map(lambda email: email.find('@'), emails))
+
+X = list(map(lambda x: ".edu." in x, emails))
+
+users = []
+for email in emails:
+  user = email[:email.find(".")]
+  has_at = "@" in user
+  users.append([user, has_at])
+
+print(users)
+
+[['cscornejo@pucp', True], ['orellana', False], ['karina', False], ['a20083223@pucp', True], ['abel', False], ['mtintaya@pucp', True], ['joselin', False], ['a20105737@pucp', True], ['jfgomezc@pucp', True], ['afrania', False], ['luzon', False], ['adrian', False], ['soto', False], ['a20132766@pucp', True], ['andre', False], ['gustavo', False], ['pmlozada@pucp', True], ['m', False], ['nicolas', False], ['gvidal@pucp', True], ['jane', False], ['m', False], ['alejandro', False], ['a20167070@pucp', True], ['riega', False], ['vlevanot@pucp', True], ['sesquives@pucp', True], ['perez', False], ['mariana', False], ['aclavo@pucp', True], ['a20182474@pucp', True], ['josue', False], ['fabio', False], ['fernanda', False], ['aquillatupa@pucp', True]]
